@@ -1,5 +1,7 @@
 "use client";
 
+import { Editor } from "novel";
+
 export default function Create() {
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,12 +46,13 @@ export default function Create() {
           <label className="label">
             <span className="label-text">Content</span>
           </label>
-          <textarea
+          {/* <textarea
             name="content"
             required
             placeholder="Input Content"
             className="textarea textarea-bordered"
-          />
+          /> */}
+          <Editor />
         </div>
         <div className="form-control mt-4">
           <button className="btn btn-primary btn-wide flex">Create Post</button>
